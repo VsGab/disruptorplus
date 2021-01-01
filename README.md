@@ -116,7 +116,7 @@ int main()
         }
         
         // Publish the terminating event.
-        sequence_t seq = claimStrategy.claim_one():
+        sequence_t seq = claimStrategy.claim_one();
         buffer[seq].data = 0;
         claimStrategy.publish(seq);
     });
